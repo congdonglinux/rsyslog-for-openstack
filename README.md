@@ -77,11 +77,11 @@ Và chuyển chủ sở hưu tập tin /log/var cho syslog để nó có thể t
 
 ```
 $ModLoad imfile #Dòng này chỉ thêm một lần
-$InputFileName /data/mysql/error.log (File log muốn đẩy)
-$InputFileTag mysql-error  (Tên file sẽ được ghi lại vào local3) 
-$InputFileStateFile stat-mysql-error (Trạng thái file)
-$InputFileSeverity info (Các log từ mức info trở lên được ghi lại)
-$InputFileFacility local3 (Facility log)
+$InputFileName /data/mysql/error.log #(File log muốn đẩy)
+$InputFileTag mysql-error  #(Tên file sẽ được ghi lại vào local3) 
+$InputFileStateFile stat-mysql-error #(Trạng thái file)
+$InputFileSeverity info #(Các log từ mức info trở lên được ghi lại)
+$InputFileFacility local3 #(Facility log)
 $InputRunFileMonitor
 local3.* @hostname:<portnumber> 
 ...
